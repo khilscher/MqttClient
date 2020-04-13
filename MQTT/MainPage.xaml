@@ -10,28 +10,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="btnConnect" Content="Connect" Margin="141,297,0,0" VerticalAlignment="Top" Click="btnConnect_Click" Width="329"/>
+        <Button x:Name="btnConnect" Content="Connect" Margin="524,80,0,0" VerticalAlignment="Top" Click="btnConnect_Click" Width="329" Height="32"/>
         <TextBox x:Name="txtBoxMqttBroker" HorizontalAlignment="Left" Height="55" Margin="141,57,0,0" Text="test.mosquitto.org" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Header="MQTT Broker:"/>
         <TextBox x:Name="txtBoxMqttPort" HorizontalAlignment="Left" Height="55" Margin="406,57,0,0" Text="1883" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Header="Port:"/>
-        <TextBox x:Name="txtBoxUsername" HorizontalAlignment="Left" Height="55" Margin="141,117,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Username:"/>
-        <TextBox x:Name="txtBoxPassword" HorizontalAlignment="Left" Height="55" Margin="141,177,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Password:"/>
-        <TextBox x:Name="txtBoxDeviceID" HorizontalAlignment="Left" Height="55" Margin="141,237,0,0" Text="client123abc" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Device ID:"/>
-        <TextBox x:Name="txtBoxTopic" HorizontalAlignment="Left" Height="55" Margin="527,58,0,0" Text="kh2" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Topic:"/>
-        <TextBox x:Name="txtBoxStatus" HorizontalAlignment="Left" Height="336" Margin="141,382,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="717" Header="Status:" IsTabStop="False" ScrollViewer.VerticalScrollBarVisibility="Visible" TextChanged="txtBoxStatus_TextChanged"/>
-        <Button x:Name="btnClear" Content="Clear" Height="32" Margin="141,733,0,0" VerticalAlignment="Top" Width="717" Click="btnClear_Click" IsTabStop="False"/>
-        <Button x:Name="btnPublish" Content="Start Publish" Height="32" Margin="527,232,0,0" VerticalAlignment="Top" Width="329" Click="btnPublish_Click"/>
-        <Button x:Name="btnSubscribe" Content="Subscribe" Height="32" Margin="527,118,0,0" VerticalAlignment="Top" Width="329" Click="btnSubscribe_Click"/>
-        <Button x:Name="btnDisconnect" Content="Disconnect" Height="32" Margin="141,335,0,0" VerticalAlignment="Top" Width="329" Click="btnDisconnect_Click"/>
-        <Button x:Name="btnUnsubscribe" Content="Unsubscribe" Height="32" Margin="527,156,0,0" VerticalAlignment="Top" Width="329" Click="btnUnsubscribe_Click"/>
-        <Button x:Name="btnStopPublish" Content="Stop Publish" Height="36" Margin="527,333,0,0" VerticalAlignment="Top" Width="329" Click="btnStopPublish_Click" RenderTransformOrigin="0.505,2.056"/>
+        <TextBox x:Name="txtBoxUsername" HorizontalAlignment="Left" Height="55" Margin="141,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Username:"/>
+        <TextBox x:Name="txtBoxPassword" HorizontalAlignment="Left" Height="55" Margin="141,299,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Password:"/>
+        <TextBox x:Name="txtBoxDeviceID" HorizontalAlignment="Left" Height="55" Margin="141,367,0,0" Text="client123abc" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Device ID:"/>
+        <TextBox x:Name="txtBoxTopic" HorizontalAlignment="Left" Height="55" Margin="524,159,0,0" Text="mytopicname112233" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Header="Topic:"/>
+        <TextBox x:Name="txtBoxStatus" HorizontalAlignment="Left" Height="243" Margin="141,447,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="717" Header="Status:" IsTabStop="False" ScrollViewer.VerticalScrollBarVisibility="Visible" TextChanged="txtBoxStatus_TextChanged"/>
+        <Button x:Name="btnClear" Content="Clear" Height="32" Margin="141,695,0,0" VerticalAlignment="Top" Width="717" Click="btnClear_Click" IsTabStop="False"/>
+        <Button x:Name="btnPublish" Content="Start Publish" Height="32" Margin="524,294,0,0" VerticalAlignment="Top" Width="329" Click="btnPublish_Click"/>
+        <Button x:Name="btnSubscribe" Content="Subscribe" Height="32" Margin="524,219,0,0" VerticalAlignment="Top" Width="329" Click="btnSubscribe_Click"/>
+        <Button x:Name="btnDisconnect" Content="Disconnect" Height="32" Margin="524,118,0,0" VerticalAlignment="Top" Width="329" Click="btnDisconnect_Click"/>
+        <Button x:Name="btnUnsubscribe" Content="Unsubscribe" Height="32" Margin="524,257,0,0" VerticalAlignment="Top" Width="329" Click="btnUnsubscribe_Click"/>
+        <Button x:Name="btnStopPublish" Content="Stop Publish" Height="36" Margin="524,386,0,0" VerticalAlignment="Top" Width="329" Click="btnStopPublish_Click" RenderTransformOrigin="0.505,2.056"/>
 
         <controls:RadialGauge x:Name="RadialGaugeControl" Value="70" Minimum="0" 
 	        Maximum="100" TickSpacing="20" ScaleWidth="26" Unit="Temp (C)" TickBrush="Red"
 	        ScaleTickBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-	        NeedleWidth="5" TickLength="18" Margin="894,50,170,633" TrailBrush="Orange">
+	        NeedleWidth="5" TickLength="18" Margin="890,43,63,519" TrailBrush="Orange">
         </controls:RadialGauge>
-        <Slider x:Name="sliderTemp" Value="50" HorizontalAlignment="Left" Height="37" Margin="527,292,0,0" VerticalAlignment="Top" Width="329" ValueChanged="sliderTemp_ValueChanged"/>
-        <TextBlock x:Name="lblTemperature" HorizontalAlignment="Left" Margin="653,273,0,0" Text="Temperature" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Slider x:Name="sliderTemp" Value="50" HorizontalAlignment="Left" Height="38" Margin="524,350,0,0" VerticalAlignment="Top" Width="324" ValueChanged="sliderTemp_ValueChanged"/>
+        <TextBlock x:Name="lblTemperature" HorizontalAlignment="Left" Margin="650,331,0,0" Text="Temperature" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="78"/>
+        <ComboBox x:Name="cboxProtocolVersion" Margin="141,122,0,0" Width="187" Header="Version:" Height="55"/>
+        <ComboBox x:Name="cboxSslVersion" Margin="350,122,0,0" Width="120" Header="SSL:" Height="55"/>
+        <CheckBox x:Name="ckboxUseSecure" Content="Use Secure" Margin="141,198,0,0" VerticalAlignment="Top" Checked="ckboxUseSecure_Checked" Unchecked="ckboxUseSecure_Unchecked"/>
+        <ComboBox x:Name="cboxQoS" Margin="350,180,0,0" Width="120" Header="QoS" ToolTipService.ToolTip="0=At Most Once, 1=At Least Once, 2=Exactly Once"/>
+        <CheckBox x:Name="chkBoxRetain" Content="Retain" Margin="246,198,0,0" VerticalAlignment="Top"/>
 
 
 
